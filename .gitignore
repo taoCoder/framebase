@@ -38,6 +38,7 @@ target/
 /*.tmproj
 /ivy*
 /eclipse
+important.properties
 
 # default HSQL database files for production mode
 /prodDb.*
