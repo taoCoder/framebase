@@ -11,7 +11,7 @@
     <mvc:annotation-driven />
 
     <!-- 4.扫描包 -->
-    <context:component-scan base-package="com.tao" />
+    <context:component-scan base-package="com.tao.controller" />
 
     <mvc:interceptors>
         <mvc:interceptor>
