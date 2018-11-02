@@ -5,6 +5,7 @@ package com.tao.enums;
  * 错误枚举
  */
 public enum ErrorEnum {
+    SYSTEM_UNKNOWN(-1,"系统异常"),
     SUCCESS(0,"成功"),
     NOT_LOGIN(10000,"未登录");
 
