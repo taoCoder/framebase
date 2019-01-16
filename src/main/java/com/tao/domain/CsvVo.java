@@ -1,6 +1,7 @@
 package com.tao.domain;
 
 import com.tao.annotation.Column;
+import com.tao.common.DateFormatter;
 
 import java.util.Date;
 
@@ -14,7 +15,7 @@ public class CsvVo {
     private int id;
     @Column(name = "姓名")
     private String name;
-    @Column(name = "时间")
+    @Column(name = "时间",formatter = DateFormatter.class)
     private Date date;
     private String no;
 
