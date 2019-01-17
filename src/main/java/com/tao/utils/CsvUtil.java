@@ -22,23 +22,23 @@ public class CsvUtil {
         }
         Class cls = list.get(0).getClass();
         Field[] declaredFields = cls.getDeclaredFields();
-        List<Field> fields = Arrays.stream(declaredFields).
-                filter(field -> field.getAnnotation(Column.class) != null)
-                .collect(Collectors.toList());
+        List<Field> fields = new ArrayList<>();
         List<String[]> content = new ArrayList<>(fields.size());
-        List<String> fieldNames = new ArrayList<>(fields.size());
         List<String> header = new ArrayList<>(fields.size());
         Map<String, DataFormatter> formatterMap = new HashMap<>(fields.size());
-        for (Field field : fields) {
-            fieldNames.add(field.getName());
-            header.add(field.getAnnotation(Column.class).name());
-            formatterMap.put(field.getName(), field.getAnnotation(Column.class).formatter().newInstance());
+        for (Field field : declaredFields) {
+            if (field.getAnnotation(Column.class) != null) {
+                fields.add(field);
+                header.add(field.getAnnotation(Column.class).name());
+                formatterMap.put(field.getName(), field.getAnnotation(Column.class).formatter().newInstance());
+            }
         }
         content.add(header.toArray(new String[fields.size()]));
 
         for (T bean : list) {
             List<String> values = new ArrayList<>(fields.size());
-            for (String fieldName : fieldNames) {
+            for (Field field : fields) {
+                String fieldName = field.getName();
                 PropertyDescriptor pd = new PropertyDescriptor(fieldName, cls);
                 Method getter = pd.getReadMethod();
                 Object value = getter.invoke(bean);
