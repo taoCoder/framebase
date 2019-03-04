@@ -9,12 +9,10 @@ import com.tao.entity.*;
 import com.tao.enums.ErrorEnum;
 import com.tao.utils.BeanValidators;
 import com.tao.utils.JacksonUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
 import javax.validation.Valid;
 
 /**
@@ -22,12 +20,11 @@ import javax.validation.Valid;
  * @description
  * @date 2018/10/16
  */
-@Controller
+@RestController
+@Slf4j
 public class UserController {
-    private static final Logger log = LoggerFactory.getLogger(UserController.class);
 
     @GetMapping("/addUser")
-    @ResponseBody
     @Login
     public Result addUser(@Valid UserDto userDto, ClientInfo clientInfo) {
         Preconditions.checkNotNull(userDto.getPin());
