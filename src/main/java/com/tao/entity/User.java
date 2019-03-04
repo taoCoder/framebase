@@ -20,51 +20,14 @@ import java.util.Date;
 public class User {
     private String pin;
 
+    @NotNull(message="名字不能为空")
     private String name;
 
-    private int age;
+    @NotNull(message="年龄不能为空")
+    private Integer age;
 
+    @NotNull(message = "work不能为空")
     private String work;
 
     private Date date;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getWork() {
-        return work;
-    }
-
-    public void setWork(String work) {
-        this.work = work;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public String getPin() {
-        return pin;
-    }
-
-    public void setPin(String pin) {
-        this.pin = pin;
-    }
 }

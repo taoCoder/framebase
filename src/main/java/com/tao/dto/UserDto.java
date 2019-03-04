@@ -25,7 +25,7 @@ public class UserDto {
     @NotNull(message="名字不能为空")
     private String name;
 
-    private int age;
+    private Integer age;
 
     private String work;
 
