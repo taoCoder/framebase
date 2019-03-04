@@ -1,6 +1,6 @@
 package com.tao.exception;
 
-import com.tao.domain.Result;
+import com.tao.common.Result;
 import com.tao.enums.ErrorEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

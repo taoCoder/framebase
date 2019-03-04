@@ -1,7 +1,7 @@
 package com.tao.utils;
 
 
-import com.tao.domain.User;
+import com.tao.entity.User;
 
 /**
  * @author huangtao54

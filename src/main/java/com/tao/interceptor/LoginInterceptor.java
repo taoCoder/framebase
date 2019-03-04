@@ -1,7 +1,7 @@
 package com.tao.interceptor;
 
 import com.tao.annotation.Login;
-import com.tao.domain.User;
+import com.tao.entity.User;
 import com.tao.enums.ErrorEnum;
 import com.tao.exception.BaseException;
 import com.tao.utils.UserContextUtils;

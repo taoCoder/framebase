@@ -2,13 +2,12 @@ package com.tao.utils;
 
 import com.tao.annotation.Column;
 import com.tao.common.DataFormatter;
-import com.tao.domain.CsvVo;
+import com.tao.entity.CsvVo;
 import org.springframework.util.CollectionUtils;
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * @author huangtao54

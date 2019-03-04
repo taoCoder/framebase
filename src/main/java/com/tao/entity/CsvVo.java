@@ -1,4 +1,4 @@
-package com.tao.domain;
+package com.tao.entity;
 
 import com.tao.annotation.Column;
 import com.tao.common.DateFormatter;

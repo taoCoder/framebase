@@ -1,6 +1,4 @@
-package com.tao.domain;
-
-import org.springframework.context.annotation.Primary;
+package com.tao.entity;
 
 import javax.persistence.Id;
 import javax.persistence.Table;

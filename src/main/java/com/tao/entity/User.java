@@ -1,10 +1,13 @@
-package com.tao.domain;
+package com.tao.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.tao.serializer.DateDeserializer;
 import com.tao.serializer.DateSerializer;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
@@ -12,6 +15,8 @@ import java.util.Date;
  * @description
  * @date 2018/10/17
  */
+@Setter
+@Getter
 public class User {
     private String pin;
 
@@ -21,8 +26,6 @@ public class User {
 
     private String work;
 
-    @JsonSerialize(using = DateSerializer.class)
-    @JsonDeserialize(using = DateDeserializer.class)
     private Date date;
 
     public String getName() {

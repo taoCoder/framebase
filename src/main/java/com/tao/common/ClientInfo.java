@@ -1,4 +1,4 @@
-package com.tao.domain;
+package com.tao.common;
 
 /**
  * @author huangtao54
